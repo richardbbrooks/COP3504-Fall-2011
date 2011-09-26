@@ -7,6 +7,8 @@ public class RationalNumber {
         this.setDenominator((int) 0);
     }
     public RationalNumber(int numer, int denom) {
+        //Set numerator before denominator so that
+        //we assign sign properly.
         this.setNumerator(numer);
         this.setDenominator(denom);
     }
@@ -31,7 +33,6 @@ public class RationalNumber {
     
     private RationalNumber perform(String operation, RationalNumber ratNum) {
         
-
         if (operation.equals("add")) {
             int a = numerator * ratNum.getDenominator();
             int b = denominator * ratNum.getNumerator();
