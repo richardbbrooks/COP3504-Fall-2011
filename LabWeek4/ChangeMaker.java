@@ -7,14 +7,14 @@ public class ChangeMaker {
         this.calculateChange();
     }
 
-    private void calculateChange() {
+    public void calculateChange() {
         calculateQuarters();
         calculateDimes();
         calculateNickels();
         calculatePennies();
     }
 
-    private void calculateQuarters() {
+    public void calculateQuarters() {
        //Math.round() because of floating point fun
        if (Math.round(money * 100.0) / 100.0  >= .25) {
            quarters++;
@@ -24,7 +24,7 @@ public class ChangeMaker {
        return;
     }
 
-    private void calculateDimes() {
+    public void calculateDimes() {
        //Math.round() because of floating point fun
        if (Math.round(money * 100.0) / 100.0 >= .10) {
            dimes++;
@@ -34,7 +34,7 @@ public class ChangeMaker {
        return;
     }
 
-    private void calculateNickels() {
+    public void calculateNickels() {
        //Math.round() because of floating point fun
        if (Math.round(money * 100.0) / 100.0 >= .05) {
            nickels++;
@@ -44,7 +44,7 @@ public class ChangeMaker {
        return;
     }
    
-    private void calculatePennies() {
+    public void calculatePennies() {
         //Math.round() because of floating point fun
         pennies = (int) Math.round(money * 100.0); 
     }
