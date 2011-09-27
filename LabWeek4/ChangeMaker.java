@@ -1,5 +1,4 @@
 public class ChangeMaker {
-        
     private float initialMoney, money;
     private int quarters = 0, dimes = 0, nickels = 0, pennies = 0;
 
@@ -16,7 +15,8 @@ public class ChangeMaker {
     }
 
     private void calculateQuarters() {
-       if (money >= .25) {
+       //Math.round() because of floating point fun
+       if (Math.round(money * 100.0) / 100.0  >= .25) {
            quarters++;
            money -= .25;
            this.calculateQuarters();
@@ -25,7 +25,8 @@ public class ChangeMaker {
     }
 
     private void calculateDimes() {
-       if (money >= .10) {
+       //Math.round() because of floating point fun
+       if (Math.round(money * 100.0) / 100.0 >= .10) {
            dimes++;
            money -= .10;
            this.calculateDimes();
@@ -34,7 +35,8 @@ public class ChangeMaker {
     }
 
     private void calculateNickels() {
-       if (money >= .05) {
+       //Math.round() because of floating point fun
+       if (Math.round(money * 100.0) / 100.0 >= .05) {
            nickels++;
            money -= .05;
            this.calculateNickels();
@@ -43,7 +45,8 @@ public class ChangeMaker {
     }
    
     private void calculatePennies() {
-       pennies = (int) (money * 100.0); 
+        //Math.round() because of floating point fun
+        pennies = (int) Math.round(money * 100.0); 
     }
 
     public int getQuarters() {
@@ -60,6 +63,10 @@ public class ChangeMaker {
     
     public int getPennies() {
         return pennies;
+    }
+
+    public float getInitialMoney() {
+        return initialMoney;
     }
 
     //OVERRIDE - toString
