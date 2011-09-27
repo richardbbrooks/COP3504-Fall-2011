@@ -1,0 +1,30 @@
+RationalNumber:
+
+    Internal Variables:
+        int numerator
+        int denominator
+
+    Internal Methods:
+        RationalNumber perform(String arg, RationalNumber)
+            Does the desired mathematical operation of the string argument and returns a RationalNumber result.
+
+    Public Methods:
+        int getNumerator()
+            Return internal numerator variable.
+        int getDenominator()
+            Return internal denominator variable.
+
+        void setNumerator(int)
+            Set internal numerator variable.
+        void setDenominator(int)
+            Set internal denominator variable.
+
+        addRational(RationalNumber)
+            Call perform with "add" as string argument. Return result.
+        subRational(RationalNumber)
+            Call perform with "sub" as string argument. Return result.
+        multRational(RationalNumber)
+            Call perform with "mult" as string argument. Return result.
+        divRational(RationalNumber)
+            Call perform with "div" as string argument. Return result.
+
