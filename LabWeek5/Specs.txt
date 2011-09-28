@@ -1,9 +1,0 @@
-Class ChangeMaker
-    int quarters, dimes, nickels, pennies
-    float money
-
-    - getQuarters, getDimes, getNickels, getPennies
-        recursively
-
-    setMoney
-    @override toString
