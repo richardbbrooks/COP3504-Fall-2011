@@ -68,8 +68,7 @@ public class BillChange {
         return initialMoney;
     }
 
-    //OVERRIDE - toString
-    @Override public String toString() {
+    public String toString() {
         String result = "";
 
         if(this.getTwenties() == 0 || this.getTwenties() > 1) {
