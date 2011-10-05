@@ -13,7 +13,7 @@ public class BillChange {
         calculateOnes();
     }
 
-    private void calculateTwenties() {
+    public void calculateTwenties() {
        //Math.round() because of floating point fun
        if (Math.round(money * 100.0) / 100.0  >= 20.00) {
            twenties++;
@@ -23,7 +23,7 @@ public class BillChange {
        return;
     }
 
-    private void calculateTens() {
+    public void calculateTens() {
        //Math.round() because of floating point fun
        if (Math.round(money * 100.0) / 100.0 >= 10.00) {
            tens++;
@@ -33,7 +33,7 @@ public class BillChange {
        return;
     }
 
-    private void calculateFives() {
+    public void calculateFives() {
        //Math.round() because of floating point fun
        if (Math.round(money * 100.0) / 100.0 >= 5.00) {
            fives++;
@@ -43,7 +43,7 @@ public class BillChange {
        return;
     }
    
-    private void calculateOnes() {
+    public void calculateOnes() {
         //Math.round() because of floating point fun
         ones = (int) Math.round(money); 
     }
