@@ -1,0 +1,60 @@
+Actors:
+    1. Student
+    2. Professor
+    3. Librarian 
+
+Task:
+    1. Identify Use Case 
+    2. Describe Scenario in 1-3 Sentences
+
+Scenarios:
+    1. Professor Places Book On Reserve
+        * A professor hands a book to a librarian. The librarian adds the book to the system. The professor and/or librarian check the reserve status.
+
+    2. Professor Removes Book From Reserve
+        * A professor requests a librarian to remove a book from the reserve. The librarian removes the book from the system. The professor and/or the librarian check the reserve status. The professor picks up the book.
+
+    3. Student Retrives Book From Reserve
+        * Student checks reserve status of book. Student requests book for retrieval from librarian. Librian marks book as loned in the reserve system and hands the student the book. 
+
+    4. Student Returns Book To The Reserve
+        * Student hands the libarian the book to be returned to the reserve. The librarian marks the book as available in the reserve system.
+
+    5. Student Checks Reserve System
+        * A student checks the reserve system for the availability of a book.
+
+    6. Professor Checks Reserve System
+        * A professor checks the reserve system for the availability of a book.
+
+    7. Librarian Checks Reserve System
+        * A librarian checks the reserve system for the status of a book.
+    
+    8. Librarian Edits Book Metadata In The Reserve System
+        * A librarian edits the data for a book in the reserve system.
+
+    9. A Professor Requests A Change In A Book's Metadata
+        * A professor asks a librarian to change a book's metadata. A librarian edits the book metadata in the reserve system.
+
+    8. A Student Looses/Damages A Book
+        * A student notifies a librarian that they lost/damaged the book. The student pays a fine. The librarian updates the metadata for the book.
+
+    9. A Professor Borrows A Book
+        * A professor asks a librarian for a book. The librarian checks the books availability. The librarian loans the book to the professor and marks the book as unavailable in the reserve system.
+
+    10. A Professor Returns A Book
+        * A professor returns a book to the librarian. The librarian marks the book as available in the reserve system.
+
+    11. A Professor Looses/Damages A Book
+        * A professor notifies a librarian that they lost/damaged the book. The professor pays a fine. The librarian updates the metadata for the book.
+
+    12. A Professor Resubmits A Book To The Reserve
+        * A professor gives a book to a librarian to put back on reserve. The librarian updates the metadata for the book. (Same as 'Place Book On Reserve')
+
+    13. A Student Renews A Retrieved Book
+        * A student shows a retrieved book to a librarian. The librarian edits the metadata for the book and extends due date. (Same as 'Retrieve Book From Reserve')
+
+    14. A Student Requests The Status Of A Book On Reserve
+        * A librarian checks the status of a book in the reserve system.
+
+    15. A Professor Requests The Status Of A Book On Reserve
+        * A librarian checks the status of a book in the reserve system.
