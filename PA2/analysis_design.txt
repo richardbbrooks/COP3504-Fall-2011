@@ -1,0 +1,50 @@
+Geometric Turtle Analysis
+(REALLY, LOOK AT THE UML - IT COVERS THE ARCHITECTURE PRETTY WELL)
+
+drawSide
+    input: length and angle as double
+    output: none
+    modifies: turtle position/state
+    constraints: max/min double
+    relationships: none
+    assumptions: none
+    
+rectangle
+    input: height and width as double
+    output: none
+    modifies: turtle position/state
+    constraints: max/min double
+    relationships: depends on drawSide
+    assumptions: none
+
+square
+    input: length as double
+    output: none
+    modifies: turtle position/state
+    constraints: max/min double
+    relationships: depends on rectangle
+    assumptions: none
+    
+pentagon
+    input: length as double
+    output: none
+    modifies: turtle position/state
+    constraints: max/min double
+    relationships: depends on drawSide
+    assumptions: none
+
+hexagon
+    input: length as double
+    output: none
+    modifies: turtle position/state
+    constraints: max/min double
+    relationships: depends on drawSide
+    assumptions: none
+
+letterC
+    input: height, width, thickness as double - facing as char
+    output: none
+    modifies: turtle positon/state
+    constraints: max/min double - thickness probably shouldn't exceed height or width, may get undesired results
+    relationships: depends on drawSide
+    assumptions: none
