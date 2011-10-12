@@ -2,15 +2,6 @@ public class ComplexNumber {
     private float real;
     private float imaginary;
 
-    /*
-     * This class may or may not have odd results in situations where
-     * the real and/or imaginary are equal to zero and a math
-     * operation is performed.
-     *
-     * The specification did not state the desired behavior
-     * of the class in these situations.
-     */
-
     public ComplexNumber() {
         this.setReal((float) 0);
         this.setImaginary((float) 0);
