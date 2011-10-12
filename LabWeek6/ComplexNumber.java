@@ -37,16 +37,47 @@ public class ComplexNumber {
     private ComplexNumber perform(String operation, ComplexNumber comNum) {
         
         if (operation.equals("add")) {
-            ComplexNumber result = new ComplexNumber();
+            int a = this.getReal();
+            int b = this.getImaginary();
+            int c = comNum.getReal();
+            int d = comNum.getImaginary();
+            
+            ComplexNumber result = new ComplexNumber(
+                    this.getReal()+comNum.getReal(),
+                    this.getImaginary()+comNum.getImaginary());
+            
             return result;
         } else if (operation.equals("sub")) {
-            ComplexNumber result = new ComplexNumber();
+            int a = this.getReal();
+            int b = this.getImaginary();
+            int c = comNum.getReal();
+            int d = comNum.getImaginary();
+            
+            ComplexNumber result = new ComplexNumber(
+                    this.getReal()-comNum.getReal(),
+                    this.getImaginary()-comNum.getImaginary());
+            
             return result;
         } else if (operation.equals("mult")) {
-            ComplexNumber result = new ComplexNumber();
+            int a = this.getReal();
+            int b = this.getImaginary();
+            int c = comNum.getReal();
+            int d = comNum.getImaginary();
+
+            int realPart = (a*c)-(b*d);
+            int imagPart = (b*c)+(a*d);
+            ComplexNumber result = new ComplexNumber(realPart, imagPart);
+            
             return result;
         } else if (operation.equals("div")) {
-            ComplexNumber result = new ComplexNumber();
+            int a = this.getReal();
+            int b = this.getImaginary();
+            int c = comNum.getReal();
+            int d = comNum.getImaginary();
+            
+            int realPart = ((a*c) + (b*d)) / ((c*c) + (d*d));
+            int imagPart = ((b*c) - (a*d)) / ((c*c) + (d*d));
+            ComplexNumber result = new ComplexNumber(realPart, imagPart);
             return result;
         } else {
             System.out.println("SHIT!");
@@ -64,6 +95,9 @@ public class ComplexNumber {
     }
     public ComplexNumber divComplex(ComplexNumber comNum) {
         return (this.perform("div", comNum));
+    }
+    public float magComplex() {
+        return ((float) Math.sqrt(Math.pow(this.getReal(),2) + Math.pow(this.getImaginary(), 2)));
     }
     @Override public String toString() {
         //We can do this because we attempt to ensure that
