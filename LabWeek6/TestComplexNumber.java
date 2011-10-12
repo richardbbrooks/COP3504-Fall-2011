@@ -9,7 +9,5 @@ public class TestComplexNumber {
         System.out.println("Div  result: " + A.divComplex(B).toString());
         System.out.println("A Mag: " + A.magComplex());
         System.out.println("B Mag: " + B.magComplex());
-
-
     }
 }
