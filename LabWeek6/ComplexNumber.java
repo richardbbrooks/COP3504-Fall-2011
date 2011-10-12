@@ -12,12 +12,12 @@ public class ComplexNumber {
      */
 
     public ComplexNumber() {
-        this.setreal((float) 0);
-        this.setimaginary((float) 0);
+        this.setReal((float) 0);
+        this.setImaginary((float) 0);
     }
     public ComplexNumber(float realN, float imagN) {
-        this.setreal(realN);
-        this.setimaginary(imagN);
+        this.setReal(realN);
+        this.setImaginary(imagN);
     }
     
     public float getReal() {
@@ -28,11 +28,11 @@ public class ComplexNumber {
     }
     
     //Changed from the specified int as parameter type because illogical specificaiton
-    public void setreal(float realN) {
+    public void setReal(float realN) {
         real = realN;
     }
     //Changed from the specified int as parameter type because illogical specification
-    public void setimaginary(float imagN) {
+    public void setImaginary(float imagN) {
         imaginary = imagN;
     }
     

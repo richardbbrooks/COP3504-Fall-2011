@@ -1,0 +1,93 @@
+Geometric Turtle Analysis
+(REALLY, LOOK AT THE UML - IT COVERS THE ARCHITECTURE PRETTY WELL)
+internal float variables:
+	real
+	imaginary
+
+getReal
+    input: none
+    output: float real
+    modifies: none
+    constraints: max/min float
+    relationships: none
+    assumptions: none
+    
+getImaginary
+    input: none
+    output: float imaginary
+    modifies: none
+    constraints: max/min float
+    relationships: none
+    assumptions: none
+
+setReal
+    input: float to assign to real
+    output: none
+    modifies: none
+    constraints: max/min float
+    relationships: none
+    assumptions: none
+    
+setImaginary
+    input: float to assign to imaginary
+    output: none
+    modifies: none
+    constraints: max/min float
+    relationships: none
+    assumptions: none
+
+perform
+    input: string operation, ComplexNumber comNum
+    output: ComplexNumber
+    modifies: none
+    constraints: max/min float
+    relationships: add/subtract/multiply/divide this and comNum
+    assumptions: operation is one of "add","sub","mult","div"
+
+addComplex
+    input: ComplexNumber comNum
+    output: ComplexNumber
+    modifies: none
+    constraints: none
+    relationships: depends on perform
+    assumptions: none
+
+subComplex
+    input: ComplexNumber comNum
+    output: ComplexNumber
+    modifies: none
+    constraints: none
+    relationships: depends on perform
+    assumptions: none
+
+multComplex
+    input: ComplexNumber comNum
+    output: ComplexNumber
+    modifies: none
+    constraints: none
+    relationships: depends on perform
+    assumptions: none
+
+divComplex
+    input: ComplexNumber comNum
+    output: ComplexNumber
+    modifies: none
+    constraints: none
+    relationships: depends on perform
+    assumptions: none
+
+magComplex
+    input: none
+    output: float
+    modifies: none
+    constraints: max/min float
+    relationships: square root of the sum powers of real and imaginary
+    assumptions: none
+
+toString
+    input: none
+    output: String
+    modifies: none
+    constraints: none
+    relationships: inserts the correct strings between real and imaginary
+    assumptions: none
