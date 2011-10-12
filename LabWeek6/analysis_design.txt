@@ -1,4 +1,4 @@
-Geometric Turtle Analysis
+ComplexNumber Analysis/Design
 (REALLY, LOOK AT THE UML - IT COVERS THE ARCHITECTURE PRETTY WELL)
 internal float variables:
 	real
