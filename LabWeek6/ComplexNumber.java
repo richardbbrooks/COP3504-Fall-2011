@@ -1,6 +1,6 @@
 public class ComplexNumber {
-    private int real;
-    private int imaginary;
+    private float real;
+    private float imaginary;
 
     /*
      * This class may or may not have odd results in situations where
@@ -12,71 +12,68 @@ public class ComplexNumber {
      */
 
     public ComplexNumber() {
-        this.setreal((int) 0);
-        this.setimaginary((int) 0);
+        this.setreal((float) 0);
+        this.setimaginary((float) 0);
     }
-    public ComplexNumber(int realN, int imagN) {
+    public ComplexNumber(float realN, float imagN) {
         this.setreal(realN);
         this.setimaginary(imagN);
     }
     
-    public int getReal() {
+    public float getReal() {
         return real;
     }
-    public int getImaginary() {
+    public float getImaginary() {
         return imaginary;
     }
     
-    public void setreal(int realN) {
+    //Changed from the specified int as parameter type because illogical specificaiton
+    public void setreal(float realN) {
         real = realN;
     }
-    public void setimaginary(int imagN) {
+    //Changed from the specified int as parameter type because illogical specification
+    public void setimaginary(float imagN) {
         imaginary = imagN;
     }
     
     private ComplexNumber perform(String operation, ComplexNumber comNum) {
         
         if (operation.equals("add")) {
-            int a = this.getReal();
-            int b = this.getImaginary();
-            int c = comNum.getReal();
-            int d = comNum.getImaginary();
+            float a = this.getReal();
+            float b = this.getImaginary();
+            float c = comNum.getReal();
+            float d = comNum.getImaginary();
             
-            ComplexNumber result = new ComplexNumber(
-                    this.getReal()+comNum.getReal(),
-                    this.getImaginary()+comNum.getImaginary());
+            ComplexNumber result = new ComplexNumber((a+c), (b+d));
             
             return result;
         } else if (operation.equals("sub")) {
-            int a = this.getReal();
-            int b = this.getImaginary();
-            int c = comNum.getReal();
-            int d = comNum.getImaginary();
+            float a = this.getReal();
+            float b = this.getImaginary();
+            float c = comNum.getReal();
+            float d = comNum.getImaginary();
             
-            ComplexNumber result = new ComplexNumber(
-                    this.getReal()-comNum.getReal(),
-                    this.getImaginary()-comNum.getImaginary());
-            
+            ComplexNumber result = new ComplexNumber((a-c), (b-d));
             return result;
         } else if (operation.equals("mult")) {
-            int a = this.getReal();
-            int b = this.getImaginary();
-            int c = comNum.getReal();
-            int d = comNum.getImaginary();
+            float a = this.getReal();
+            float b = this.getImaginary();
+            float c = comNum.getReal();
+            float d = comNum.getImaginary();
 
-            int realPart = (a*c)-(b*d);
-            int imagPart = (b*c)+(a*d);
+            float realPart = (a*c)-(b*d);
+            float imagPart = (b*c)+(a*d);
             ComplexNumber result = new ComplexNumber(realPart, imagPart);
             
             return result;
         } else if (operation.equals("div")) {
-            int a = this.getReal();
-            int b = this.getImaginary();
-            int c = comNum.getReal();
-            int d = comNum.getImaginary();
+            float a = this.getReal();
+            float b = this.getImaginary();
+            float c = comNum.getReal();
+            float d = comNum.getImaginary();
             
-            int realPart = ((a*c) + (b*d)) / ((c*c) + (d*d));
-            int imagPart = ((b*c) - (a*d)) / ((c*c) + (d*d));
+            float realPart = ((a*c) + (b*d)) / ((c*c) + (d*d));
+            float imagPart = ((b*c) - (a*d)) / ((c*c) + (d*d));
             ComplexNumber result = new ComplexNumber(realPart, imagPart);
             return result;
         } else {
@@ -100,8 +97,10 @@ public class ComplexNumber {
         return ((float) Math.sqrt(Math.pow(this.getReal(),2) + Math.pow(this.getImaginary(), 2)));
     }
     @Override public String toString() {
-        //We can do this because we attempt to ensure that
-        //the real carries the sign for the ComplexNumber
-        return (real + "+" + imaginary + "i");
+        if (imaginary >= 0) {
+            return (real + "+" + imaginary + "i");
+        } else {
+            return (real + "" + imaginary + "i");
+        }
     }
 }
