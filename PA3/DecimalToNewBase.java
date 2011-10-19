@@ -10,7 +10,7 @@ public class DecimalToNewBase {
         return "";
     }
 
-    private String performBaseConversion(int p_base, int p_quotient, int p_remainder, String p_result) {
+    private String performBaseConversion(int p_base, int quotient, int remainder, String p_result) {
         //Complicated
         return "";
     }
@@ -18,15 +18,15 @@ public class DecimalToNewBase {
     public String decToBaseTwo() {
         return (decToBaseTwo(decimal / 2, decimal % 2));    
     }
-    private String decToBaseTwo(int p_quotient, int p_remainder) {
+    private String decToBaseTwo(int quotient, int remainder) {
         String result = "";
-        //System.out.println("fuck: " + p_quotient + " | " + p_remainder);
-        if (p_quotient < 1) {
-            //System.out.println("break: " + p_quotient + " | " + p_remainder);
-            return String.valueOf(p_remainder);
+        //System.out.println("fuck: " + quotient + " | " + remainder);
+        if (quotient < 1) {
+            //System.out.println("break: " + quotient + " | " + remainder);
+            return String.valueOf(remainder);
         } else {
-            result = decToBaseTwo(p_quotient / 2, p_quotient % 2) + String.valueOf(p_remainder);
-            //System.out.println("continue: " + p_quotient/2 + " | " + p_remainder%2);
+            result = decToBaseTwo(quotient / 2, quotient % 2) + String.valueOf(remainder);
+            //System.out.println("continue: " + quotient/2 + " | " + remainder%2);
         }
         return result;
     }
