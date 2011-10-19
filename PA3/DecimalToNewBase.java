@@ -19,16 +19,14 @@ public class DecimalToNewBase {
         return (decToBaseTwo(decimal / 2, decimal % 2));    
     }
     private String decToBaseTwo(int quotient, int remainder) {
-        String result = "";
         //System.out.println("fuck: " + quotient + " | " + remainder);
         if (quotient < 1) {
             //System.out.println("break: " + quotient + " | " + remainder);
             return String.valueOf(remainder);
         } else {
-            result = decToBaseTwo(quotient / 2, quotient % 2) + String.valueOf(remainder);
+            return decToBaseTwo(quotient / 2, quotient % 2) + String.valueOf(remainder);
             //System.out.println("continue: " + quotient/2 + " | " + remainder%2);
         }
-        return result;
     }
 
     public String decToBaseThree() {
