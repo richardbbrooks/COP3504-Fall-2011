@@ -20,12 +20,13 @@ public class DecimalToNewBase {
     }
     private String decToBaseTwo(int p_quotient, int p_remainder) {
         String result = "";
+        //System.out.println("fuck: " + p_quotient + " | " + p_remainder);
         if (p_quotient < 1) {
-            System.out.println("break: " + p_quotient + " | " + p_remainder);
+            //System.out.println("break: " + p_quotient + " | " + p_remainder);
             return String.valueOf(p_remainder);
         } else {
-            result = decToBaseTwo(p_quotient / 2, p_remainder % 2) + String.valueOf(p_remainder);
-            System.out.println("continue: " + p_quotient + " | " + p_remainder);
+            result = decToBaseTwo(p_quotient / 2, p_quotient % 2) + String.valueOf(p_remainder);
+            //System.out.println("continue: " + p_quotient/2 + " | " + p_remainder%2);
         }
         return result;
     }
