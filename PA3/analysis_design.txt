@@ -1,0 +1,25 @@
+DecimalToNewBase Class Analysis/Design
+(REALLY, LOOK AT THE UML - IT COVERS WHAT THE HELL IS GOING ON PRETTY WELL)
+(Actually, I'm done with this redundant crap. Reference the UML/code)
+
+private internal variable 'decimal' 
+    holds the value of the number to perform base conversions on
+
+DecToN
+    Public method that accepts the intended base as a parameter and calls performBaseConversion and begins the conversion process.
+
+performBaseConversion
+    Private method that accepts the base, quotient, and remainder of the ongoing base conversion.
+    If we we no longer have a quotient, return the string representation of the remainder. Else return a performBaseConversion(base, quotient/base, quotient % base) + the string representation of the remainder.
+    This function is tree recursive.
+
+decToBaseTwo
+    Public method that's a dumber version of DecToN. Calls the private method decToBaseTwo with parameters of the internal variable divided by two and the internal variable modulous two
+
+private decToBaseTwo
+    Private method called by public method decToBaseTwo. It is a dumbed down version of performBaseConversion.
+    If we no longer have a quotient, return the string representation of the remainder. Else return another decToBaseTwo(quotient/2, quotient%2) + the string representation of the remainder.
+    This function is tree recursive.
+
+The rest of the conversion functions follow the same exact pattern as decToBaseTwo and it's private method of the same name. The only differences are the change in functions' names and the number they're dividing by in recusively calling themselves.
+The amount of repetition in this assignment doesn't make any sense. The functions DecToN and performBaseConversion perclude needing the other functions. All they do is add to the amount of time it takes to complete this assignment.

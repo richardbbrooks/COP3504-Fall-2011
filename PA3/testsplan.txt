@@ -1,0 +1,3 @@
+The test plan is to test a bunch of numbers both on and between boundry conditions. Boundry conditions can be clarified as situations where powers of the base occur.
+
+The results of these test cases are expected to be the correct values for these conversions - as corroborated by http://www.cleavebooks.co.uk/scol/calnumba.htm
