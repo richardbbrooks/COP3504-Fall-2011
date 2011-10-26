@@ -6,7 +6,7 @@ public class DecimalToNewBase {
     }
 
     public String DecToN(int base) {
-        return performBaseConversion(base, decimal / base, decimal / base);
+        return performBaseConversion(base, decimal / base, decimal % base);
     }
 
     private String performBaseConversion(int base, int quotient, int remainder) {
